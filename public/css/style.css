@@ -1,0 +1,204 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 0 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.main-container, .login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #feb47b;
+}
+
+/* Top bar styles */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.dropbtn img {
+    width: 48px;
+    height: 48px;
+}
+
+.menu-dropdown {
+    margin-left: 80px;
+}
+
+.account-dropdown {
+    margin-right: 80px;
+}
+
+/* Form Styles */
+.form-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
+}
+
+.form-group label {
+    display: block !important;
+    margin-bottom: 8px !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    color: #333 !important;
+}
+
+.form-group input {
+    width: 100% !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    box-sizing: border-box !important;
+}
+
+button {
+    width: 100% !important;
+    padding: 15px !important;
+    font-size: 18px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    background-color: #ff7e5f !important;
+    color: white !important;
+    cursor: pointer !important;
+}
+
+button:hover {
+    background-color: #feb47b !important;
+}
+
+.login-link, .forgot-password-link {
+    margin-top: 10px !important;
+    font-size: 14px !important;
+}
+
+.login-link a, .forgot-password-link a {
+    color: #ff7e5f !important;
+    text-decoration: none !important;
+}
+
+.login-link a:hover, .forgot-password-link a:hover {
+    text-decoration: underline !important;
+}
+
+/* Remove Extra White Box */
+html, body {
+    height: 100% !important;
+}
+
+.login-container, .main-container {
+    padding: 20px !important;
+    margin: 0 auto !important;
+}
+
+form {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+form::after {
+    content: none !important;
+}
+
+form button {
+    margin-bottom: 0 !important;
+}
+
+form p {
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        width: 100%;
+    }
+
+    .main-container, .login-container {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .logo-container img {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}

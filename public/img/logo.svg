@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <!-- Circular icon -->
+  <circle cx="50" cy="50" r="40" fill="url(#gradient1)" />
+
+  <!-- Apple shape -->
+  <path d="M50 30 
+           C42 30, 35 40, 35 50 
+           C35 60, 42 70, 50 70 
+           C58 70, 65 60, 65 50 
+           C65 40, 58 30, 50 30 
+           Z 
+           M50 25 
+           C52 25, 54 23, 54 21 
+           C54 19, 52 17, 50 17 
+           C48 17, 46 19, 46 21 
+           C46 23, 48 25, 50 25 
+           Z" 
+        fill="white" />
+
+  <!-- Gradient for the circle -->
+  <defs>
+    <linearGradient id="gradient1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff4500" />
+      <stop offset="100%" stop-color="#ff6347" />
+    </linearGradient>
+  </defs>
+
+  <!-- Text: FitApp -->
+  <text x="110" y="60" font-family="Arial, sans-serif" font-weight="bold" font-size="48" fill="#333">
+    <tspan fill="#ff4500">Fit</tspan><tspan fill="#ff6347">App</tspan>
+  </text>
+</svg>

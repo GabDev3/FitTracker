@@ -1,15 +1,15 @@
 <?php
 
+namespace models; // <-- Add the correct namespace
 
 class User
 {
-    private $email;
-    private $password;
-    private $name;
-    private $surname;
+    private string $email;
+    private string $password;
+    private string $name;
+    private string $surname;
 
-
-    public function __construct(string $email, string $password, string  $name, string $surname)
+    public function __construct(string $email, string $password, string $name, string $surname)
     {
         $this->email = $email;
         $this->password = $password;
@@ -36,26 +36,4 @@ class User
     {
         return $this->surname;
     }
-
-    public function setEmail(string $email): void
-    {
-        $this->email = $email;
-    }
-
-    public function setPassword(string $password): void
-    {
-        $this->password = $password;
-    }
-
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-
-    public function setSurname(string $surname): void
-    {
-        $this->surname = $surname;
-    }
-
-
 }

@@ -1,0 +1,4 @@
+INSERT INTO public.users (id, id_user_details, email, password, enabled, created_at) VALUES (42, 45, 'test@admin.pl', '$2y$10$EsxyWorw.RAfwTn4BHpKNe.q7l2jADkLQU2u5eQLU3lNh6GrWZ9sW', false, '2025-02-02 15:17:05.649393');
+INSERT INTO public.users (id, id_user_details, email, password, enabled, created_at) VALUES (45, 48, 'testAdmin2@m.pl', '$2y$10$veGHl04vqSDLlBq95BjcJ.0kjVCMav3yk1oL8Iq6QBiDrFZo.e.Eu', false, '2025-02-02 16:42:19.018762');
+INSERT INTO public.users (id, id_user_details, email, password, enabled, created_at) VALUES (46, 49, 'test@m.pl', '$2y$10$d56MNH50G4iNd4.tWUrQzuNMxCe.4zdCSV0Ca/1P.uIeY0SHdYdVG', false, '2025-02-02 17:00:07.228885');
+INSERT INTO public.users (id, id_user_details, email, password, enabled, created_at) VALUES (47, 50, 'testUser@m.pl', '$2y$10$hPQr9pT0J8Z0gRsGzRYWr.inUQx.zzanIBcq1x2aoo/Z/EQwvUB.K', false, '2025-02-02 20:13:45.111378');

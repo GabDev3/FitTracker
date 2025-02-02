@@ -10,7 +10,6 @@ class Repository
     protected $database;
 
 
-    //TODO zaimplementować singleton
     public function __construct()
     {
         $this->database = new Database();

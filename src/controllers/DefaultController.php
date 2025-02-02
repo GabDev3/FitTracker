@@ -17,9 +17,18 @@ class DefaultController extends AppController {
         $this->render('login');
     }
 
-    public function main() {
+    public function main()
+    {
+        if (!isset($_SESSION['user_id'])) {
+            // If user is not logged in, redirect to login page
+            header("Location: /login");
+            exit();
+        }
+
+        // Render the main view if the user is logged in
         $this->render('main');
     }
+
 
     public function register() {
         $this->render('register');

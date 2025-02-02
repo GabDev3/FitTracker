@@ -2,30 +2,35 @@
 
 require_once 'src/controllers/DefaultController.php';
 require_once 'src/controllers/SecurityController.php';
+require_once 'src/controllers/MealController.php'; // Add MealController
 
 class Routing {
-    private static $routes = []; // Declare the static property
+    private static $routes = [];
 
-    public static function get($url, $controller) {
-        self::$routes[$url] = $controller;
+    public static function get($url, $controller, $method = 'index') {
+        self::$routes['GET'][$url] = [$controller, $method];
     }
 
-    public static function post($url, $controller) {
-        self::$routes[$url] = $controller;
+    public static function post($url, $controller, $method = 'index') {
+        self::$routes['POST'][$url] = [$controller, $method];
     }
 
     public static function run($url) {
+        $requestMethod = $_SERVER['REQUEST_METHOD'];
         $action = explode('/', $url)[0];
 
-        if (!array_key_exists($action, self::$routes)) {
-            die('Wrong URL');
+        if (!isset(self::$routes[$requestMethod][$action])) {
+            die('Wrong URL or method');
         }
-        
-        $controllerName = self::$routes[$action];
-        $controller = new $controllerName;
-        $action = $action ?: 'index';
 
-        $controller->$action();
+        [$controllerName, $method] = self::$routes[$requestMethod][$action];
+        $controller = new $controllerName;
+
+        if (!method_exists($controller, $method)) {
+            die("Method $method not found in $controllerName");
+        }
+
+        $controller->$method();
     }
 }
 ?>

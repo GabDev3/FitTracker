@@ -158,14 +158,12 @@ WHERE u.id = :id');
 
     public function deleteUserById(int $id)
     {
-        $this->database->connect()->beginTransaction();
 
         $stmt = $this->database->connect()->prepare('
         DELETE FROM public.users WHERE id = :id');
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 
-        $this->database->connect()->commit();
     }
 
 }

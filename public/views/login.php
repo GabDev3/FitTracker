@@ -22,7 +22,6 @@
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
             <button type="submit" class="login-button">Login</button>
-            <p class="forgot-password-link"><a href="/forgot-password">Forgot Password?</a></p>
             <div class="error-message">
                 <?php
                     if(isset($messages)){
